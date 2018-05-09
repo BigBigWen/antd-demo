@@ -1,0 +1,45 @@
+.measurementData-container{
+  width: 100%;
+  padding:7px 16px;
+  .tabContainer{
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    margin-bottom: 24px;
+    .active{
+      background-color: #ffd100;
+    }
+    .item{
+      padding:7px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 10%;
+      min-width: 90px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+  }
+  .card-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .card-item{
+      flex-grow: 1;
+      margin-right: 9px;
+      &:last-of-type{
+        margin-right: 0px
+      }
+    }
+  }
+  .chart {
+    width: 100%;
+    height: 23.44vw;
+    min-height: 300px;
+  }
+  .double-chart-container{
+    display: flex;
+    width: 100%;
+    height: 23.44vw;
+    min-height: 300px;
+  }
+}

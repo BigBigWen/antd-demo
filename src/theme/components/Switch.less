@@ -1,0 +1,17 @@
+body {
+  .ant-switch {
+    background-color: #fdedbe;
+  }
+  .ant-switch-checked {
+    background-color: @primary-color;
+  }
+  .ant-switch-disabled {
+    cursor: not-allowed;
+    background-color: #d3d3d3;
+    pointer-events: inherit;
+    opacity: 1;
+    &:after {
+      cursor: not-allowed;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.page-history {
+  display: flex;
+  flex: 1 1 auto;
+  width: 100%;
+  flex-direction: row;
+  .right-container {
+    flex: 1 1 auto;
+    display: flex;
+    width: e('calc(100% - 260px)');
+    flex-direction: column;
+    background-color: #fff;
+    box-sizing: border-box;
+    .ant-spin-nested-loading {
+      .ant-spin-container {
+        display: flex;
+      }
+    }
+    .ant-spin-dot {
+      top: 350px !important; // 暂时定死，因为没有更好的方案来解决菊花的位置问题
+    }
+  }
+}
+

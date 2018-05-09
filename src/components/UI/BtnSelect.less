@@ -1,0 +1,29 @@
+.c-btn-select {
+  display: flex;
+  flex-direction: row;
+  flex: 0 0 auto;
+  height: 40px;
+  justify-content: space-around;
+  align-items: center;
+  > a {
+    display: inline-block;
+    min-width: 56px;
+    color: #333;
+    height: 30px;
+    line-height: 28px;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    text-decoration: none;
+    &.selected {
+      border: 1px solid #ffd100;
+    }
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+      text-decoration: none;
+    }
+  }
+}

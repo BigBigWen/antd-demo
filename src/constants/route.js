@@ -1,0 +1,25 @@
+export const breadcrumbNameMap = {
+  assets: '资产管理',
+  alarm: '异常管理',
+  'manual-alarm': '安全隐患',
+  energy: '能效管理',
+  'energy-overview': '能效概览',
+  'loss-overview': '损耗概览',
+  'energy-analysis': '用电分析',
+  asset: '资产档案',
+  report: '管理报告',
+  diagram: '运行概览',
+  environmental: '环境监测',
+  history: '历史数据',
+  'loss-history': '损耗数据',
+  'history-data': '用电数据',
+  config: '配置管理',
+  'project-list': '项目管理', // 此处命名存在问题，进入项目详情后刷新页面，导航中项目管理应该高亮
+  'inspection-plan': '巡检计划',
+  rota: '值班管理',
+  'ticket-statistics': '工单统计',
+  project: '项目详情',
+  'loss-config': '损耗配置',
+  'personal-center': '个人任务中心',
+  'ep-statistics': '电量统计'
+};

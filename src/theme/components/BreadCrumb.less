@@ -1,0 +1,27 @@
+body {
+  .ant-breadcrumb {
+    height: 36px;
+    line-height: 36px;
+    padding-left: 40px;
+    box-sizing: border-box;
+    >span {
+      .ant-breadcrumb-link {
+        a {
+          &:link, &:visited, &:hover, &:active {
+            text-decoration: none;
+          }
+        }
+      }
+      &:last-of-type {
+        .ant-breadcrumb-link {
+          a {
+            color: #333;
+            &:hover {
+              color: #ffd100;
+            }
+          }
+        }
+      }
+    }
+  }
+}

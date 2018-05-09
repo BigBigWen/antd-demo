@@ -1,0 +1,17 @@
+body {
+  .ant-cascader-menu {
+    width: 270px;
+    overflow-x: hidden;
+    .ant-cascader-menu-item {
+      &:hover {
+        background: #fdedbe;
+      }
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .ant-cascader-menu-item-active:not(.ant-cascader-menu-item-disabled),
+    .ant-cascader-menu-item-active:not(.ant-cascader-menu-item-disabled):hover {
+      background: #f7f7f7;
+    }
+  }
+}

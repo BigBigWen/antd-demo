@@ -1,0 +1,39 @@
+body {
+  .ant-pagination {
+    .ant-pagination-item {
+      border: 1px solid #d2d2d2;
+      &:focus, &:hover {
+        background-color: @primary-color;
+        >a {
+          color: @text-color;
+        }
+      }
+      &:not(.ant-pagination-item-active) {
+        border-color: #d2d2d2;
+      }
+    }
+    .ant-pagination-item-active {
+      background-color: @primary-color;
+      >a {
+        color: @text-color;
+      }
+    }
+  }
+  .ant-pagination.mini {
+    .ant-pagination-item {
+      margin-right: 5px;
+      font-size: 12px;
+      &:not(.ant-pagination-item-active) {
+        border-color: #d2d2d2;
+      }
+    }
+    .ant-pagination-prev, .ant-pagination-next {
+      margin-right: 5px;
+    }
+    .ant-pagination-options {
+      .ant-select-selection-selected-value {
+        font-size: 12px;
+      }
+    }
+  }
+}

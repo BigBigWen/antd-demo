@@ -1,0 +1,26 @@
+body {
+  .ant-steps {
+    .ant-steps-item.ant-steps-status-finish {
+      .ant-steps-tail {
+        > i:after {
+          background: @success-color;
+          box-shadow: 0 0 0 0 #21db25;
+        }
+      }
+
+      .ant-steps-head-inner {
+        border-color: @success-color;
+        > .ant-steps-icon {
+          color: @success-color;
+        }
+      }
+    }
+    .ant-steps-item.ant-steps-status-process {
+      .ant-steps-head-inner {
+        > .ant-steps-icon {
+          color: @text-color;
+        }
+      }
+    }
+  }
+}

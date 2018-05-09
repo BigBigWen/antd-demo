@@ -1,0 +1,113 @@
+.page-loss-history {
+  display: flex;
+  flex: 1 1 auto;
+  width: 100%;
+  flex-direction: row;
+
+  .tree-container {
+    margin-right: 8px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    width: 260px;
+  }
+  .right-container {
+    flex: 1 1 auto;
+    display: flex;
+    width: e('calc(100% - 260px)');
+    flex-direction: column;
+    background-color: #fff;
+    box-sizing: border-box;
+    .date-container {
+      height: 46px;
+      line-height: 46px;
+      width: 100%;
+      padding: 0 15px;
+    }
+    .ant-spin-nested-loading {
+      .ant-spin-container {
+        display: flex;
+      }
+    }
+    .ant-spin-dot {
+      top: 350px !important; // 暂时定死，因为没有更好的方案来解决菊花的位置问题
+    }
+  }
+  .chart-container {
+    // flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 8px 15px;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    .card-container {
+      display: flex;
+      width: 100%;
+      height: 87px;
+      box-sizing: border-box;
+    }
+    .single-chart {
+      display: flex;
+      flex: 0 0 auto;
+      width: 100%;
+      height: 23.44vw;
+      min-height: 300px;
+    }
+    .double-chart {
+      display: flex;
+      flex: 0 0 auto;
+      width: 100%;
+      height: 40.62vw;
+      min-height: 520px;
+    }
+    .lossData-wrapper {
+      min-height: 185px;
+      // height: 14.45vw;
+    }
+    .lossData-row {
+      height: 46px;
+      line-height: 46px;
+      color: #444;
+      box-sizing: border-box;
+      border-bottom: 1px solid #d2d2d2;
+      background-color: #fff;
+      .lossData-col {
+        height: 46px;
+        line-height: 46px;
+        box-sizing: border-box;
+        padding-left: 12px;
+      }
+    }
+    .lossData-title {
+      background-color: #f8fafa;
+      height: 46px;
+      line-height: 46px;
+      color: #444;
+      box-sizing: border-box;
+      border-bottom: 1px solid #d2d2d2;
+      margin-top: 24px;
+      padding-left: 12px;
+    }
+  }
+  .ant-tabs-nav-wrap {
+    display: none;
+  }
+  .ant-tabs-bar {
+    display: none;
+  }
+  .ant-tabs {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    &:not(.ant-tabs-vertical) {
+      > .ant-tabs-content-animated {
+        display: flex;
+        flex: 1 1 auto;
+      }
+    }
+  }
+}
+

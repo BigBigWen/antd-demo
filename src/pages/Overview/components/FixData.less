@@ -1,0 +1,56 @@
+.alarm-fix-stat {
+  position: absolute;
+  bottom: 19px;
+  display: flex;
+  flex-direction: row;
+    .stat {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 160px;
+      &:first-of-type {
+        width: 200px;
+      }
+      &:not(:last-of-type) {
+        margin-right: 10px;
+      }
+      padding: 0 20px 0 10px;
+      box-sizing: border-box;
+      .label {
+        display: block;
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        text-align: left;
+      }
+      .value {
+        display: block;
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        text-align: right;
+      }
+    }
+  &.grey {
+    .stat{
+      background-color: #212025;
+      .label {
+        color: #acacad;
+      }
+      .value {
+        color: #e2b901;
+      }
+    }
+  }
+  &.whitesmoke {
+    .stat{
+      background-color: #fff;
+      .label {
+        color: #444;
+      }
+      .value {
+        color: #333;
+      }
+    }
+  }
+}

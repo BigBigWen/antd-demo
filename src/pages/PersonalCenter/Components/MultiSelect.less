@@ -1,0 +1,22 @@
+.multi-select-wrapper {
+  width: 130px;
+  position: relative;
+  > div {
+    width: 100%;
+  }
+  > i {
+    position: absolute;
+    right: 7px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #dddcdc;
+  }
+  .ant-select-selection--multiple {
+    .ant-select-selection__choice {
+      display: none;
+    }
+    .ant-select-selection__placeholder {
+      display: block !important;
+    }
+  }
+}

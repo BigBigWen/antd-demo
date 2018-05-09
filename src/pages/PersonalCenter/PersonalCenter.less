@@ -1,0 +1,42 @@
+.page-personal-center {
+  display: flex;
+  flex: 1 1 auto;
+  width: 100%;
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .create-button {
+      margin-top: 8px;
+      border-radius: 15px;
+      background-color: #ffd100;
+    }
+    .ant-tabs-bar {
+      margin-bottom: 0;
+      padding-right: 20px;
+      background-color: #fff;
+    }
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      // filter-wrapper table-wrapper detail-wrapper 将来会放到对应组件的less文件中
+      .filter-wrapper {
+        display: flex;
+        width: 100%;
+        min-height: 46px;
+        background-color: #fff;
+        margin-bottom: 20px;
+      }
+      .sub-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+      }
+    }
+  }
+  .selected{
+    background-color: #f6df9a;
+  }
+}

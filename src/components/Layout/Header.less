@@ -1,0 +1,107 @@
+.c-header{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: #1b1b1b;
+  position: relative;
+  flex: 0 0 auto;
+  .menuItem-home{
+    width: 100px;
+    text-align: center;
+  }
+  .logo{
+    width: 180px;
+    height: 64px;
+  }
+  .title{
+    color: #ffffff;
+    font-size: 14px;
+    color: #ffd100;
+    margin-left: 36px;
+    margin-right: 40px;
+    .version{
+      font-size: 8px;
+      color:#717070;
+    }
+  }
+  .username-wrapper{
+    position: absolute;
+    right: 15px;
+    .username{
+      height: 60px;
+      color: #f5f5f4;
+      line-height: 60px;
+      position: relative;
+      right: 0;
+      display: flex;
+      align-items: center;
+      .avatarIcon{
+        cursor: pointer;
+        background: #fff;
+        color: #000000;
+        margin: 20px;
+      }
+      .avatarIcon:hover + ul{
+        display: block;
+        color: #fff;
+      }
+      ul{
+        padding-left: 0px;
+        position: absolute;
+        width: 120px;
+        top: 45px;
+        right: 0px;
+        z-index: 1000;
+        display: none;
+        background-color: #fff;
+        border-top: solid 1px #dcdcdc;
+        margin-top: 6px;
+        box-shadow: -0.7px 2.9px 7px 0 rgba(0, 0, 0, 0.35);
+        &:hover{
+          display: block;
+        }
+        &:before{
+          content: '';
+          position: absolute;
+          left: 75px;
+          top: -19px;
+          border-width: 10px;
+          border-style: solid dashed dashed;
+          border-color: transparent transparent #dcdcdc transparent;
+          font-size: 0;
+          line-height: 0;
+        }
+        &:after{
+          content: '';
+          position: absolute;
+          top: -16px;
+          left: 75px;
+          border-width: 10px;
+          border-style: solid dashed dashed;
+          border-color: transparent transparent #fff transparent;
+          font-size: 0;
+          line-height: 0;
+        }
+        a:hover{
+          text-decoration: none;
+        }
+        li{
+          width: 100%;
+          padding-left: 10px;
+          list-style: none;
+          font-weight: normal;
+          line-height: 40px;
+          text-align: left;
+          color: #1b1b1b;
+          cursor: pointer;
+          &:hover{
+            color: #ffd100
+          }
+          .icon{
+            margin-right: 8px;
+          }
+        }
+      }
+    }
+  }
+}

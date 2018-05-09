@@ -1,0 +1,85 @@
+.forecastType-container{
+  margin-top: 16px;
+  .card-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 190px;
+    .left-container{
+      width: 76%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .row{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 12px;
+        .card{
+          margin-right: 16px;
+          background-color: #f4f5f5;
+          flex-grow: 1;
+          width: 100%;
+          padding:10px;
+          .title{
+            color: #999999;
+            margin-bottom: 10px;
+          }
+          .card-context{
+            color: #333;
+            font-size: 24px;
+          }
+        }
+        .capacityPrice{
+          background-color: #1890ff;
+          .title,.card-context{
+            color: #fff ;
+          }
+        }
+        .demandPrice{
+          background-color: #13c2c2;
+          .title,.card-context{
+            color: #fff ;
+          }
+        }
+
+      }
+    }
+    .right-container{
+      width: 24%;
+      height: 100%;
+      background-color: #f4f5f5;
+      padding:10px;
+      .title{
+        color: #999999
+      }
+      .context{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        .type{
+          display:flex;
+          width: 72px;
+          height: 72px;
+          background-color: #1890ff;
+          color: #fff;
+          font-weight: bolder;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          font-size: 24px;
+          margin: 10px auto;
+        }
+        .price{
+          font-size: 24px;
+          color: #ea4941
+        }
+        .footer{
+          color: #666
+        }
+      }
+    }
+  }
+}

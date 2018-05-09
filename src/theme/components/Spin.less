@@ -1,0 +1,23 @@
+body {
+  .ant-spin-nested-loading {
+    width: 100%;
+    height: 100%;
+    .ant-spin-container {
+      height: 100%;
+      width: 100%;
+    }
+    >div {
+      >.ant-spin {
+        max-height: none;
+      }
+    }
+  }
+  .ant-spin-dot {
+    i {
+      background-color: @text-color;
+    }
+  }
+  .ant-spin-text {
+    color: @text-color;
+  }
+}

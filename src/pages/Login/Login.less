@@ -1,0 +1,418 @@
+.page-login {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  background: url('./imgs/login-bg.png') no-repeat center;
+  background-size: 100% 100%;
+  .header-wrapper {
+    display: block;
+    color: #333;
+    font-size: 26px;
+    margin: 4vh 0 0 2.4vw;
+  }
+  .form-wrapper {
+    position: absolute;
+    top: 28vh;
+    right: 7.9vw;
+    display: flex;
+    flex-direction: column;
+    width: 290px;
+    height: 330px;
+    background-color: white;
+    box-shadow: 0 10px 15px 1px #e0dece;
+    .title {
+      display: block;
+      width: 100%;
+      height: 45px;
+      text-align: center;
+      line-height: 44px;
+      font-size: 18px;
+      color: #333;
+      border-bottom: 1px solid #eee;
+      box-sizing: border-box;
+    }
+    .form-container {
+      display: flex;
+      flex: 1 1 auto;
+      width: 100%;
+      padding: 36px 24px 47px;
+      box-sizing: border-box;
+      form {
+        width: 100%;
+      }
+      input {
+        height: 36px;
+        font-size: 16px;
+        border: 1px solid #e5e5e5;
+      }
+      .password {
+        margin-bottom: 0;
+      }
+      .checkbox {
+        margin-bottom: 36px;
+        .ant-checkbox-wrapper {
+          padding-left: 0;
+          span {
+            font-size: 12px;
+            color: #666;
+            font-weight: normal;
+          }
+        }
+        .forget-password-link {
+          font-size: 12px;
+          color: #28c5ff;
+          float: right;
+        }
+      }
+      .error {
+        width: 100%;
+        height: 39px;
+        line-height: 39px;
+        color: #ec5734;
+        margin-top: -39px;
+      }
+      .submit-btn {
+        width: 100%;
+        color: white;
+      }
+    }
+  }
+
+  .shadow-top(@top) {
+    top: @top + 3.4vh;
+  }
+  .keyframes(@name; @args) {
+    @keyframes @name { @args(); }
+  }
+  .animation(@name1; @duration1; @delay1; @name2; @duration2: 1s; @delay2: 1s) {
+    animation-name: @name1, @name2;
+    animation-duration: @duration1, @duration2;
+    animation-delay: @delay1, @delay2;
+    animation-timing-function: ease-in-out, ease-in-out;
+    animation-iteration-count: 1, infinite;
+    animation-fill-mode: forwards, both;
+    animation-direction: normal, alternate;
+  }
+  // 上下动画
+  .keyframes(up-down-sm, {
+    from {
+      transform: translateY(-5%);
+    }
+    to {
+      transform: translateY(5%);
+    }
+  });
+  .keyframes(up-down-md, {
+    from {
+      transform: translateY(-7.5%);
+    }
+    to {
+      transform: translateY(7.5%);
+    }
+  });
+  .keyframes(up-down-lg, {
+    from {
+      transform: translateY(-10%);
+    }
+    to {
+      transform: translateY(10%);
+    }
+  });
+  // 阴影出现
+  .keyframes(shadow-show, {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  });
+  // 阴影缩放
+  .keyframes(lg-sm, {
+    from {
+      transform: scale(1.05, 1.05);
+    }
+    to {
+      transform: scale(0.95, 0.95);
+    }
+  });
+
+  .block-sm {
+    display: block;
+    width: 18.28vw;
+    height: 9.61vw;
+    background: url('./imgs/树状图/柱形图白体.png') no-repeat center;
+    background-size: 100% 100%;
+  }
+  .block-mid {
+    display: block;
+    width: 25.63vw;
+    height: 13.67vw;
+    background: url('./imgs/盒子/盒子白体.png') no-repeat center;
+    background-size: 100% 100%;
+  }
+  .block-lg {
+    display: block;
+    width: 30.07vw;
+    height: 16.25vw;
+    background: url('./imgs/数据/数据白体.png') no-repeat center;
+    background-size: 100% 100%;
+  }
+
+  // 柱状图模块
+  @column-left: 33vw;
+  @column-top: 21vh;
+  .keyframes(drop-down-column, {
+    from {
+      top: -25vh;
+    }
+    to {
+      top: @column-top;
+    }
+  });
+  .column-top {
+    .block-sm;
+    position: absolute;
+    left: @column-left;
+    top: -25vh;
+    z-index: 30;
+    background: url('./imgs/树状图/带阴影.png') no-repeat 35% 60%;
+    background-size: 50% 50%;
+    .animation(drop-down-column; 0.8s; 0.4s; up-down-sm; 2s; 2.5s);
+  }
+  .column-mid {
+    .block-sm;
+    position: absolute;
+    left: @column-left;
+    top: -25vh;
+    z-index: 20;
+    .animation(drop-down-column; 0.8s; 0.2s; up-down-sm; 2s; 2.5s);
+  }
+  .column-bottom {
+    .block-sm;
+    .shadow-top(@column-top);
+    position: absolute;
+    left: @column-left;
+    z-index: 10;
+    opacity: 0;
+    background: url('./imgs/树状图/阴影.png') no-repeat center;
+    background-size: 100% 100%;
+    .animation(shadow-show; 0.5s; 0.7s; lg-sm; 2s; 2.5s);
+  }
+  // 回路模块
+  @circuit-left: 45vw;
+  @circuit-top: 32vh;
+  .keyframes(drop-down-circuit, {
+    from {
+      top: -25vh;
+    }
+    to {
+      top: @circuit-top;
+    }
+  });
+  .circuit-top {
+    .block-sm;
+    position: absolute;
+    left: @circuit-left;
+    top: -25vh;
+    z-index: 30;
+    background: url('./imgs/回路/带阴影.png') no-repeat 48% 45%;
+    background-size: 40% 40%;
+    .animation(drop-down-circuit; 0.8s; 0.2s; up-down-lg; 3s; 2.75s);
+  }
+  .circuit-mid {
+    .block-sm;
+    position: absolute;
+    left: @circuit-left;
+    top: -25vh;
+    z-index: 20;
+    .animation(drop-down-circuit; 0.8s; 0s; up-down-lg; 3s; 2.75s);
+  }
+  .circuit-bottom {
+    .block-sm;
+    .shadow-top(@circuit-top);
+    position: absolute;
+    left: @circuit-left;
+    z-index: 10;
+    opacity: 0;
+    background: url('./imgs/回路/阴影.png') no-repeat center;
+    background-size: 100% 100%;
+    .animation(shadow-show; 0.5s; 0.5s; lg-sm; 3s; 2.75s);
+  }
+  // 数据模块
+  @data-left: 10vw;
+  @data-top: 29vh;
+  .keyframes(drop-down-data, {
+    from {
+      top: -38vh;
+    }
+    to {
+      top: @data-top;
+    }
+  });
+  .data-top {
+    .block-lg;
+    position: absolute;
+    left: @data-left;
+    top: -38vh;
+    z-index: 30;
+    background: url('./imgs/数据/带阴影.png') no-repeat 48% 45%;
+    background-size: 40% 40%;
+    .animation(drop-down-data; 0.8s; 0.8s; up-down-md; 3s; 3.5s);
+  }
+  .data-mid {
+    .block-lg;
+    position: absolute;
+    left: @data-left;
+    top: -38vh;
+    z-index: 20;
+    .animation(drop-down-data; 0.8s; 0.6s; up-down-md; 3s; 3.5s);
+  }
+  .data-bottom {
+    .block-lg;
+    .shadow-top(@data-top);
+    position: absolute;
+    left: @data-left;
+    z-index: 10;
+    opacity: 0;
+    background: url('./imgs/数据/阴影.png') no-repeat center;
+    background-size: 100% 100%;
+    .animation(shadow-show; 0.5s; 1.1s; lg-sm; 3s; 3.5s);
+  }
+  // 表格模块
+  @table-left: 34.5vw;
+  @table-top: 44vh;
+  .keyframes(drop-down-table, {
+    from {
+      top: -25vh;
+    }
+    to {
+      top: @table-top;
+    }
+  });
+  .table-top {
+    .block-sm;
+    position: absolute;
+    left: @table-left;
+    top: -25vh;
+    z-index: 30;
+    background: url('./imgs/表格/带阴影.png') no-repeat 48% 45%;
+    background-size: 55% 55%;
+    .animation(drop-down-table; 0.8s; 1.0s; up-down-md; 2s; 3s);
+  }
+  .table-mid {
+    .block-sm;
+    position: absolute;
+    left: @table-left;
+    top: -25vh;
+    z-index: 20;
+    background: url('./imgs/表格/表格白体.png') no-repeat center;
+    background-size: 100% 100%;
+    .animation(drop-down-table; 0.8s; 0.8s; up-down-md; 2s; 3s);
+  }
+  .table-bottom {
+    .block-sm;
+    .shadow-top(@table-top);
+    position: absolute;
+    left: @table-left;
+    z-index: 10;
+    opacity: 0;
+    background: url('./imgs/表格/阴影.png') no-repeat center;
+    background-size: 100% 100%;
+    .animation(shadow-show; 0.5s; 1.3s; lg-sm; 2s; 3s);
+  }
+  // 空模块
+  @empty-left: 4vw;
+  @empty-top: 55vh;
+  .keyframes(drop-down-empty, {
+    from {
+      top: -25vh;
+    }
+    to {
+      top: @empty-top;
+    }
+  });
+  .empty-top {
+    .block-sm;
+    position: absolute;
+    left: @empty-left;
+    top: -25vh;
+    z-index: 30;
+    background: url('./imgs/空/表.png') no-repeat 70% 15%;
+    background-size: 80% 80%;
+    .animation(drop-down-empty; 0.8s; 1.2s; up-down-lg; 2s; 3.5s);
+  }
+  .empty-mid {
+    .block-sm;
+    position: absolute;
+    left: @empty-left;
+    top: -25vh;
+    z-index: 20;
+    background: url('./imgs/空/空白体.png') no-repeat center;
+    background-size: 100% 100%;
+    .animation(drop-down-empty; 0.8s; 1.0s; up-down-lg; 2s; 3.5s);
+  }
+  .empty-bottom {
+    .block-sm;
+    .shadow-top(@empty-top);
+    position: absolute;
+    left: @empty-left;
+    z-index: 10;
+    opacity: 0;
+    background: url('./imgs/空/阴影.png') no-repeat center;
+    background-size: 100% 100%;
+    .animation(shadow-show; 0.5s; 1.5s; lg-sm; 2s; 3.5s);
+  }
+  // 盒子模块
+  @box-left: 18vw;
+  @box-top: 56vh;
+  .keyframes(drop-down-box, {
+    from {
+      top: -25vh;
+    }
+    to {
+      top: @box-top;
+    }
+  });
+  .box-box {
+    .block-mid;
+    position: absolute;
+    left: @box-left;
+    top: -25vh;
+    z-index: 40;
+    background: url('./imgs/盒子/带阴影.png') no-repeat 50% 25%;
+    background-size: 40% 60%;
+    .animation(drop-down-box; 0.8s; 1.4s; up-down-sm; 3s; 4.25s);
+  }
+  .box-table {
+    .block-mid;
+    position: absolute;
+    left: @box-left;
+    top: -25vh;
+    z-index: 30;
+    background: url('./imgs/盒子/盒子表格层.png') no-repeat 55% 35%;
+    background-size: 85% 85%;
+    .animation(drop-down-box; 0.8s; 1.3s; up-down-sm; 3s; 4.25s);
+  }
+  .box-body {
+    .block-mid;
+    position: absolute;
+    left: @box-left;
+    top: -25vh;
+    z-index: 20;
+    .animation(drop-down-box; 0.8s; 1.2s; up-down-sm; 3s; 4.25s);
+  }
+  .box-shadow {
+    .block-mid;
+    .shadow-top(@box-top);
+    position: absolute;
+    left: @box-left;
+    z-index: 10;
+    opacity: 0;
+    background: url('./imgs/盒子/白体阴影.png') no-repeat center;
+    background-size: 100% 100%;
+    .animation(shadow-show; 0.5s; 1.7s; lg-sm; 3s; 4.25s);
+  }
+}

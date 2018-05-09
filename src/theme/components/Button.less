@@ -1,0 +1,104 @@
+body {
+  .disabled {
+    color: rgba(0, 0, 0, 0.25);
+    background-color: #f7f7f7;
+    border-color: #d9d9d9;
+  }
+  .ant-btn {
+    &:hover, &:focus {
+      color: @primary-color;
+      border-color: #ffbf00;
+    }
+    &:active {
+      background-color: #f5f4f4;
+      border-color: #ffbf00;
+    }
+  }
+  .ant-btn-danger {
+    color: #fff;
+    background-color: @error-color;
+    border-color:  @error-color;
+    &:hover, &:focus {
+      color: #fff;
+      background-color: #f56a49;
+    }
+    &:active {
+      background-color: #ca4525;
+    }
+    &:disabled {
+      .disabled;
+    }
+  }
+  .ant-btn-primary {
+    color: @text-color;
+    &:disabled {
+      .disabled;
+    }
+    &:focus, &:hover {
+      color: @text-color;
+    }
+  }
+  .ant-btn-info {
+    background-color: @info-color;
+    color: #fff;
+    border: 1px solid @info-color;
+    &:disabled {
+      .disabled;
+    }
+    &:focus, &:hover {
+      color: #fff;
+      background-color: #68bffd;
+      border: 1px solid #68bffd;
+    }
+    &:active {
+      color: #fff;
+      background-color: #2593e1;
+      border: 1px solid #2593e1;
+    }
+  }
+  .ant-btn-success {
+    background-color: @success-color;
+    color: #fff;
+    border: 1px solid @success-color;
+    &:disabled {
+      .disabled;
+    }
+    &:focus, &:hover {
+      color: #fff;
+      background-color: #21dbc2;
+      border: 1px solid #21dbc2;
+    }
+    &:active {
+      color: #fff;
+      background-color: #09aa95;
+      border: 1px solid #09aa95;
+    }
+  }
+  .ant-btn-link {
+    .normal {
+      color: #49aff7;
+      background-color: transparent;
+      border: 1px solid transparent;
+    }
+    .disabled {
+      color: #999;
+      background-color: transparent;
+      border: 1px solid transparent;
+    }
+    .normal;
+    &:disabled {
+      .disabled;
+      &:hover, &:focus, &:active {
+        .disabled;
+      }
+    }
+    &:focus, &:hover {
+      color: @primary-color;
+      background-color: transparent;
+      border: 1px solid transparent;
+    }
+    &:active {
+      .normal;
+    }
+  }
+}

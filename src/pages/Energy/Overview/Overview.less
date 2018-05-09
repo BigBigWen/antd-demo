@@ -1,0 +1,186 @@
+.page-energy-overview {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex: 1 1 auto;
+  .title {
+    display: flex;
+    height: 60px;
+    padding-left: 18px;
+    align-items: center;
+    flex: 0 0 auto;
+    font-size: 18px;
+    color: #333;
+  }
+  .project {
+    width: 290px;
+  }
+  .ant-tabs {
+    .ant-tabs-extra-content {
+      float: left !important;
+      line-height: 56px;
+      margin-right: 24px;
+    }
+    .ant-tabs-bar {
+      background-color: #fff;
+      border: none;
+      .ant-tabs-nav {
+        .ant-tabs-tab {
+          padding: 15px 16px;
+          height: 56px;
+        }
+      }
+    }
+  }
+  .ant-select-selection--single {
+    height: 56px;
+    border: none;
+    .ant-select-selection__rendered {
+      line-height: 56px;
+      font-size: 16px;
+      margin-left: 20px;
+    }
+    .ant-select-arrow {
+      font-size: 18px;
+    }
+  }
+  .notfound-container{
+    background-color: #fff;
+    width: 100%;
+  }
+  .block-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 340px;
+    margin-bottom: 16px;
+  }
+  .charts-base-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .charts-up-wrapper {
+    .charts-base-wrapper;
+    background-color: #fff;
+    height: 520px;
+    margin-bottom: 24px;
+    .base-chart {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .chart-wrapper {
+      display: block;
+      width: 100%;
+      height: 460px;
+    }
+    .chart-EP {
+      .base-chart;
+      width: 70%;
+    }
+    .chart-circuit {
+      .base-chart;
+      width: 30%;
+      .pie-chart-container {
+        display: flex;
+        height: 100%;
+        flex-direction: row;
+        position: relative;
+        .total {
+          position: absolute;
+          left: 27%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          >span {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            &:last-of-type {
+              font-size: 22px;
+              color: #333;
+              margin-top: 16px;
+            }
+          }
+        }
+        .pie-chart {
+          display: block;
+          width: 60%;
+          height: 100%;
+        }
+        .legend {
+          display: flex;
+          width: 40%;
+          flex: 0 0 auto;
+          flex-direction: column;
+          justify-content: space-between;
+          font-size: 12px;
+          padding: 20px 20px 20px 0;
+          box-sizing: border-box;
+          .legend-item {
+            display: flex;
+            width: 100%;
+            height: 20px;
+            justify-content: space-between;
+            align-items: center;
+            flex: 0 0 auto;
+            .name-icon {
+              display: flex;
+              width: 70%;
+              flex-direction: row;
+              height: 100%;
+              align-items: center;
+              .icon {
+                display: block;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                margin-right: 5px;
+              }
+              .name {
+                display: block;
+                width: e('calc(100% - 13px)');
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+              }
+            }
+            .percent {
+              display: flex;
+              width: 30%;
+              flex: 0 0 auto;
+            }
+          }
+        }
+      }
+    }
+  }
+  .charts-down-wrapper {
+    .charts-base-wrapper;
+    height: 500px;
+    justify-content: space-between;
+    .base-chart {
+      display: flex;
+      flex-direction: column;
+      width: e('calc(50% - 8px)');
+      background-color: #fff;
+      height: 100%;
+    }
+    .chart-wrapper {
+      display: block;
+      width: 100%;
+      height: 440px;
+    }
+    .chart-P {
+      .base-chart;
+    }
+    .chart-Pdmd {
+      .base-chart;
+    }
+  }
+}

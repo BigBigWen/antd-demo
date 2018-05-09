@@ -1,0 +1,116 @@
+.block {
+  display: flex;
+  flex-direction: column;
+  width: e('calc(25% - 12px)');
+  height: 100%;
+  background-color: #fff;
+  border: 1px solid #e8eaf0;
+  box-sizing: border-box;
+  &:not(:last-of-type) {
+    margin-right: 16px;
+  }
+  .header {
+    display: flex;
+    flex-direction: row;
+    flex: 0 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 46px;
+    font-size: 14px;
+    color: #666;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  .content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    flex: 1 1 auto;
+    height: 100%;
+    .main {
+      display: flex;
+      width: 100%;
+      flex: 1 1 auto;
+      color: #333;
+      flex-direction: row;
+      align-items: center;
+      .value-container {
+        display: block;
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+      }
+      .value {
+        display: inline-block;
+        font-size: 48px;
+      }
+      .unit {
+        display: inline-block;
+        font-size: 24px;
+        margin-left: 12px;
+      }
+    }
+    .sub {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 98px;
+      padding: 20px 20px;
+      box-sizing: border-box;
+      justify-content: space-between;
+      .sub-info {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: auto;
+        align-items: center;
+        font-size: 16px;
+        .anticon {
+          margin-left: 8px;
+          color: #0cc2aa;
+        }
+      }
+      .bg-green {
+        .ant-progress-inner {
+          border-radius: 0;
+          .ant-progress-bg {
+            border-radius: 0;
+            background-color: #2fc25b;
+          }
+        }
+      }
+      .bg-blue {
+        .ant-progress-inner {
+          border-radius: 0;
+          .ant-progress-bg {
+            border-radius: 0;
+            background-color: #1890ff;
+          }
+        }
+      }
+      .bg-red {
+        .ant-progress-inner {
+          border-radius: 0;
+          .ant-progress-bg {
+            border-radius: 0;
+            background-color: #f65555;
+          }
+        }
+      }
+    }
+  }
+  .footer {
+    display: flex;
+    flex: 0 0 auto;
+    width: 100%;
+    height: 46px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    color: #333;
+    border-top: 1px solid #e8eaf0;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+}

@@ -1,0 +1,286 @@
+.page-duty-manage {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: row;
+  width: 100%;
+  background-color: #f0f2f5;
+  .duty-select-wrapper {
+    width: 100%;
+    background-color: #ffffff;
+    margin-top: 18px;
+    margin-bottom: 16px;
+    .action-btn {
+      display: flex;
+      justify-content: flex-end;
+      > button {
+        margin-top: 8px;
+        margin-right: 20px;
+        > span {
+          width: 84px;
+          display: inline-block;
+        }
+      }
+      > button:first-child {
+        background-color: #49aff7;
+        color: #FFF;
+      }
+    }
+    .filter-wrapper {
+      min-height: 46px;
+    }
+    .ant-tabs-bar {
+      margin-bottom: 0;
+      padding-right: 20px;
+      background-color: #fff;
+    }
+    .create-button {
+      margin-top: 8px;
+      border-radius: 15px;
+      background-color: #ffd100;
+    }
+    .title {
+      align-self: flex-start;
+      width: 140px;
+      height: 46px;
+      line-height: 46px;
+      font-family: MicrosoftYaHei;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      color: #333333;
+      border-top: 2px solid #ffd100;
+    }
+  }
+  .duty-manage-content {
+    display: flex;
+  }
+  .duty-calendar {
+    background-color: #FFF;
+    height: 100%;
+    margin-left: 16px;
+    flex: 1 1 auto;
+    .duty-calendar-error {
+      padding: 0 24px;
+      height: 37px;
+      background-color: #ffc9c9;
+      line-height: 37px;
+      a {
+        color: #ec5734;
+      }
+      span {
+        color: #ec5734;
+      }
+    }
+    .duty-calendar-date {
+      display: inline-block;
+      margin-top: 5px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+    }
+    .duty-calendar-action {
+      background-color: #ec5734;
+      color: #FFF;
+      margin-right: 15px;
+    }
+    .ant-card-head {
+      border-bottom: none;
+    }
+    .ant-card-body {
+      padding: 0 24px 24px 24px;
+    }
+  }
+  .duty-panel {
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    width: 355px;
+    .ant-card {
+      height: 100%;
+    }
+    .ant-card-body {
+      padding: 12px;
+    }
+    .empty-duty-list {
+      display: block;
+      color: #888;
+      line-height: 30px;
+      text-align: center;
+    }
+    .duty-operation {
+      .ant-form-item {
+        margin-bottom: 4px;
+        &:last-of-type {
+          margin-top: 24px;
+        }
+      }
+      .ant-form-explain {
+        display: none;
+      }
+      .duty-operation-tips {
+        display: inline-block;
+        width: 15px;
+        text-align: center;
+        line-height: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: #c2c1c1;
+        color: #000;
+        font-size: 12px;
+        margin-left: 10px;
+        cursor: pointer;
+      }
+      .duty-operation-header {
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .duty-manage-operation-button {
+        display: flex;
+        justify-content: center;
+      }
+      .duty-manage-generate-button {
+        margin-right: 20px;
+      }
+    }
+    .duty-people-show {
+      margin-top: 20px;
+    }
+    .selected-date {
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: normal;
+      text-align: left;
+      color: #333333;
+    }
+    .duty-leader {
+      font-size: 16px;
+      letter-spacing: normal;
+      text-align: left;
+      color: #888888;
+      margin-bottom: 10px;
+      margin-top: 20px;
+    }
+    .duty-content-leader {
+      max-height: 80px;
+      overflow-y: overlay;
+    }
+    .duty-content-worker {
+      max-height: e("calc(100vh - 620px)");
+      overflow-y: overlay;
+    }
+    .on-duty-list {
+      display: flex;
+      justify-content: space-around;
+      text-align: left;
+      margin-bottom: 20px;
+      font-size: 14px;
+      .name {
+        width: 60px;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+        color: #333333;
+      }
+      .tele {
+        color: #666666;
+      }
+      .time {
+        color: #666666;
+      }
+      .change-tab {
+        display: inline-block;
+        color: #2188d1;
+        margin-right: 5px;
+      }
+      .disabled-change-tab {
+        color: #ddd;
+        cursor: not-allowed;
+        pointer-events: auto;
+      }
+    }
+  }
+
+  .new-duty-btn {
+    width: 100px;
+    height: 28px;
+    border-radius: 14px;
+    background-color: #febf2c;
+    color: #333333;
+    font-size: 12px;
+    font-family: MicrosoftYaHei;
+    border: none;
+    position: absolute;
+    top: 127px;
+    right: 60px;
+  }
+  .new-duty-btn:hover {
+    background-color: #febf2c;
+    color: #333333;
+  }
+  .duty-select-wrapper .sep-line {
+    width: 1120px;
+    height: 1px;
+    background-color: #e9e8e8;
+  }
+  .search-form {
+    width: 100%;
+  }
+  .date-col {
+    display: flex;
+    align-items: center;
+  }
+  .date-col .date-picker {
+    width: 90px;
+    height: 46px;
+    padding-left: 15px;
+    padding-right: 10px;
+    box-sizing: border-box;
+    line-height: 46px;
+    font-family: MicrosoftYaHei;
+    font-size: 12px;
+    text-align: center;
+    color: #666666;
+  }
+  .ant-calendar-picker {
+    width: 115px;
+    height: 28px;
+  }
+  .gen-duty-btn {
+    width: 100px;
+    height: 28px;
+    border-radius: 14px;
+    background-color: #febf2c;
+    color: #333333;
+    font-size: 12px;
+    font-family: MicrosoftYaHei;
+    border: none;
+  }
+  .gen-duty-btn:hover {
+    background-color: #febf2c;
+    color: #333333;
+  }
+  .delete-btn {
+    width: 100px;
+    height: 28px;
+    border-radius: 14px;
+    background-color: #ffffff;
+    border: solid 1px #aaaaaa;
+    font-size: 12px;
+    font-family: MicrosoftYaHei;
+    color: #333333;
+  }
+  .delete-btn:hover {
+    background-color: #ffffff;
+    color: #333333;
+  }
+
+  .ant-dropdown-menu-item {
+    width: 100px;
+    text-align: center;
+  }
+  .ant-dropdown-menu-item:hover {
+    background-color: #fdedbe;
+  }
+}
+

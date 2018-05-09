@@ -1,0 +1,69 @@
+.page-energy-analysis {
+  display: flex;
+  flex: 1 1 auto;
+  width: 100%;
+  flex-direction: row;
+
+  .tree-container {
+    margin-right: 8px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    width: 260px;
+  }
+  .right-container {
+    flex: 1 1 auto;
+    display: flex;
+    width: e('calc(100% - 260px)');
+    flex-direction: column;
+    background-color: #fff;
+    box-sizing: border-box;
+    .date-container {
+      height: 46px;
+      line-height: 46px;
+      width: 100%;
+      padding: 0 15px;
+    }
+    .main-chart {
+      display: flex;
+      flex-direction: row;
+      flex: 0 0 auto;
+      width: 100%;
+      height: 23.44vw;
+      min-height: 300px;
+    }
+    .sub-chart {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      height: 100%;
+      padding-bottom: 8px;
+      box-sizing: border-box;
+      .title {
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        height: 20px;
+        font-size: 16px;
+        padding-left: 16px;
+      }
+      .chart-wrapper {
+        display: block;
+        width: 100%;
+        height: e('calc(100% - 20px)');
+      }
+    }
+    .ant-spin-nested-loading {
+      .ant-spin-container {
+        display: flex;
+      }
+    }
+    .ant-spin-dot {
+      top: 350px !important; // 暂时定死，因为没有更好的方案来解决菊花的位置问题
+    }
+  }
+}
