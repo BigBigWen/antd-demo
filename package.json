@@ -1,6 +1,6 @@
 {
-  "name": "alcedinidae",
-  "version": "v1.2.1",
+  "name": "antd-demo",
+  "version": "0.1.0",
   "private": true,
   "dependencies": {
     "autoprefixer": "7.1.2",
@@ -71,119 +71,20 @@
     "webpack-manifest-plugin": "1.2.1",
     "whatwg-fetch": "2.0.3"
   },
-  "devDependencies": {
-    "antd": "^3.2.1",
-    "babel": "^6.23.0",
-    "babel-plugin-module-alias": "^1.6.0",
-    "less": "^2.7.2",
-    "npm-run-all": "^4.1.1",
-    "onchange": "^3.2.1",
-    "qs": "^6.5.1",
-    "source-map-explorer": "^1.4.0"
-  },
-  "lint-staged": {
-    "src/**/*.{js,jsx,json,css}": [
-      "prettier --single-quote --write",
-      "git add"
-    ]
-  },
   "scripts": {
-    "analyze": "source-map-explorer build/static/js/main.*",
-    "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
-    "precommit": "lint-staged",
-    "test": "standard && node scripts/test.js --env=jsdom",
-    "build:dll": "webpack --config config/webpack.dll.config.js"
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "start": "react-scripts start",
+    "build": "npm run build-css && react-scripts build",
+    "test": "react-app-rewired  test --env=jsdom",
+    "eject": "react-scripts eject"
   },
-  "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx}"
-    ],
-    "setupFiles": [
-      "<rootDir>/config/polyfills.js"
-    ],
-    "testMatch": [
-      "<rootDir>/src/**/__tests__/**/*.js?(x)",
-      "<rootDir>/src/**/?(*.)(spec|test).js?(x)"
-    ],
-    "testEnvironment": "node",
-    "testURL": "http://localhost",
-    "transform": {
-      "^.+\\.(js|jsx)$": "<rootDir>/node_modules/babel-jest",
-      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
-      "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
-    },
-    "transformIgnorePatterns": [
-      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
-    ],
-    "moduleNameMapper": {
-      "^react-native$": "react-native-web"
-    },
-    "moduleFileExtensions": [
-      "web.js",
-      "js",
-      "json",
-      "web.jsx",
-      "jsx",
-      "node"
-    ]
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
+  "main": "config-overrides.js",
+  "devDependencies": {
+    "node-sass-chokidar": "0.0.3",
+    "webpack": "^3.8.1"
   },
-  "babel": {
-    "presets": [
-      "react-app"
-    ],
-    "plugins": [
-      [
-        "module-alias",
-        [
-          {
-            "src": "./src/components",
-            "expose": "components"
-          },
-          {
-            "src": "./src/lib",
-            "expose": "lib"
-          },
-          {
-            "src": "./src/constants",
-            "expose": "constants"
-          },
-          {
-            "src": "./src/media",
-            "expose": "media"
-          },
-          {
-            "src": "./src/rest",
-            "expose": "rest"
-          },
-          {
-            "src": "./src/actions",
-            "expose": "actions"
-          },
-          {
-            "src": "./src/store",
-            "expose": "store"
-          },
-          {
-            "src": "./src/components/Chart/index",
-            "expose": "Chart"
-          }
-        ]
-      ]
-    ]
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "proxy": {
-    "/api": {
-      "target": "http://10.9.7.108",
-      "changeOrigin": true
-    },
-    "/socket.io": {
-      "target": "http://10.9.7.108",
-      "ws": true,
-      "changeOrigin": true
-    }
-  }
+  "author": "",
+  "license": "ISC"
 }
