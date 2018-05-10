@@ -69,7 +69,6 @@ const App = ({ history }) => {
   return (
     <Router history={history}>
       <Switch>
-        <Route exact path="/test" component={Test} />
         <Route exact path="/login" component={Login} />
         <LoginRoute>
           <div className="page-content">
@@ -77,7 +76,7 @@ const App = ({ history }) => {
             <div className="page-content-wrapper">
               <Switch>
                 <Route exact path="/" component={RedirectByAuth} />
-
+                <Route exact path="/test" component={Test} />
                 <PrivateRoute
                   path="/overview"
                   component={() => <Overview />}

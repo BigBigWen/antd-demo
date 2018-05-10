@@ -1,0 +1,76 @@
+
+.c-jfpg-wrapper{
+  display: flex;
+  width: 100%;
+  .row-container{
+    line-height: 40px;
+  }
+  .btn-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .time-bar-error{
+    height: 20px;
+    line-height: 20px;
+    width: 100%;
+    color: #ec5734;
+    text-align: center;
+  }
+  .bar-wrapper{
+    display: flex;
+    height: 30px;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 20px auto 0px;
+    .time-item{
+      display: flex;
+      background: #ddd;
+      flex: 1;
+      height: 1.5vw;
+      border-right: 1px solid black;
+      align-items: center;
+      justify-content: center;
+      &:last-of-type{
+        border-right: none;
+      }
+    }
+    .jianMarked{background-color:rgba(255, 109, 44, .5) !important;}
+    .jianHovering{background-color:rgba(255, 109, 44, .5) !important;}
+    .fengMarked{background-color: rgba(206,144,209,.5) !important;}
+    .fengHovering{background-color: rgba(206,144,209,.5) !important;}
+    .pingMarked{background-color: rgba(13,182,217, .5) !important;}
+    .pingHovering{background-color: rgba(13,182,217, .5) !important;}
+    .guMarked{background-color:rgba(99,188,127, .5) !important;}
+    .guHovering{background-color:rgba(99,188,127, .5) !important;}
+    // .marked { background-color:rgba(255, 109, 44, .5) !important; }
+    .default {background-color: #ddd; }
+    // .hovering{background-color:rgba(255, 109, 44, .5) !important;}
+    .jian {background-color: #ff6d2c}
+    .feng{ background-color: #ce90d1}
+    .ping{background-color: #0db6d9 ;}
+    .gu {background-color: #63bc7f ;}
+  }
+  .season {
+    margin-bottom: 24px;
+  }
+  .master-control{
+    width: 400px;
+   
+  }
+  .subordination{
+    width: 400px;
+    margin-left: 60px;
+  }
+  .selected {
+    border: 8px solid #f9e484;
+  }
+  
+}
+.c-jfpg-wrapper-footer-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}

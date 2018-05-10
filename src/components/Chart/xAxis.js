@@ -10,6 +10,23 @@ const xAxis = {
   nameGap: 2
 };
 
+export const monthTimeXAxis = ({ date, ...rest }) => {
+  const start = moment(date, 'x').startOf('month');
+  const end = moment(date, 'x').endOf('month');
+  return {
+    ...xAxis,
+    type: 'time',
+    axisLabel: {
+      showMinLabel: false,
+      showMaxLabel: false,
+      formatter: val =>
+        moment(val).isBefore(moment(start)) || moment(val).isAfter(moment(end))
+          ? ''
+          : moment(val).format('DD-mm')
+    },
+    ...rest
+  };
+};
 export const hourTimeXAxis = ({ date, ...rest }) => {
   const start = moment(date).startOf('day');
   const end = moment(date).endOf('day');

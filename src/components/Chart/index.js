@@ -12,7 +12,8 @@ export {
   hourCatXAxis,
   dayXAxis,
   monthXAxis,
-  yearXAxis
+  yearXAxis,
+  monthTimeXAxis
 } from './xAxis';
 export { singleYAxis, doubleYAxis } from './yAxis';
 export { default as getRadar } from './radar';
