@@ -3,29 +3,3 @@
 # dependencies
 /node_modules
 
-/typings
-
-# testing
-/coverage
-
-
-# misc
-.DS_Store
-.env
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# vscode
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-bootstrap.css
-.idea/*
-*.zip
-debug.log
-index.html
-vendor-*-manifest.json
-vendor.*.dll.js
